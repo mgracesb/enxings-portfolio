@@ -1,9 +1,15 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import HomeContent from '@/components/organisms/HomeContent.vue'
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <HomeContent />
   </main>
 </template>
+
+<style scoped lang="scss">
+main {
+  height: calc(100vh - 27px);
+}
+</style>

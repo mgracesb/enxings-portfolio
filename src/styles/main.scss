@@ -1,5 +1,6 @@
 @import './base.css';
 @import './text.scss';
+@import './breakpoints.scss';
 
 * {
   font-family: 'Montserrat', sans-serif;
@@ -12,6 +13,11 @@ h2 {
 
 h3 {
   font-weight: 700;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
 }
 /* #app {
   max-width: 1280px;
