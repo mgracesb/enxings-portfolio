@@ -9,18 +9,22 @@
 <script setup>
 import ContentSection from '@/components/molecules/ContentSection.vue'
 import BlackImg from '@/assets/photos/black.png'
-import CamelImg from '@/assets/photos/camel.png'
 import WhiteImg from '@/assets/photos/white.png'
+import CamelImg from '@/assets/photos/camel.png'
+import BlueImg from '@/assets/photos/blue.png'
 import PurpleImg from '@/assets/photos/purple.png'
-import OrangeImg from '@/assets/photos/yellow.png'
+import YellowImg from '@/assets/photos/yellow.png'
+import OrangeImg from '@/assets/photos/orange.png'
 import PinkImg from '@/assets/photos/pink.png'
 import { onMounted, ref } from 'vue'
 
 const sectionRefs = ref([
   { id: 'black', image: BlackImg },
+  { id: 'white', image: WhiteImg },
   { id: 'camel', image: CamelImg },
   { id: 'pink', image: PinkImg },
-  { id: 'white', image: WhiteImg },
+  { id: 'blue', image: BlueImg },
+  { id: 'yellow', image: YellowImg },
   { id: 'orange', image: OrangeImg },
   { id: 'purple', image: PurpleImg }
 ])
@@ -68,16 +72,24 @@ onMounted(() => {
   &.black {
     background-color: #181818;
   }
-
-  &.camel {
-    background-color: #d2a172;
-  }
-  &.pink {
-    background-color: #df497e;
-  }
-
   &.white {
     background-color: #e1e3e7;
+  }
+
+  &.camel {
+    background-color: #d2b38a;
+  }
+
+  &.blue {
+    background-color: #013894;
+  }
+
+  &.pink {
+    background-color: #c32c4f;
+  }
+
+  &.yellow {
+    background-color: #e6e409;
   }
 
   &.orange {

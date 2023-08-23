@@ -10,6 +10,6 @@ import HomeContent from '@/components/organisms/HomeContent.vue'
 
 <style scoped lang="scss">
 main {
-  height: calc(100vh - 27px);
+  height: calc(100vh - 4rem);
 }
 </style>

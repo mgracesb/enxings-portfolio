@@ -31,6 +31,7 @@ const { contentImage } = defineProps({
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  animation: appear 1s ease 0s 1 normal forwards;
 
   &__polaroid {
     width: 70%;
@@ -83,6 +84,16 @@ const { contentImage } = defineProps({
         }
       }
     }
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
 </style>

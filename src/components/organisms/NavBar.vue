@@ -12,7 +12,7 @@ defineProps({
 <template>
   <nav class="NavBar">
     <RouterLink to="/"><h1>ENXING SHYU</h1></RouterLink>
-    <RouterLink to="/contact">Contact me</RouterLink>
+    <RouterLink to="/about">Sobre mí</RouterLink>
   </nav>
 </template>
 
