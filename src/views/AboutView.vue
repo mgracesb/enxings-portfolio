@@ -1,45 +1,47 @@
 <template>
-  <div class="AboutView">
-    <p class="AboutView__contact__text">¡Hola! soy Enxing.</p>
-    <p class="AboutView__contact__text">
-      Actualmente me encuentro en una emocionante etapa de mi vida, inmersa en mi formación en artes
-      escénicas en la ESAD de Málaga.
-    </p>
-    <p class="AboutView__contact__text">
-      Desde temprana edad, he descubierto en la expresión artística un camino para conectar con mi
-      creatividad y explorar el poder de la imagen. Mi recorrido incluye experiencia como
-      <b>modelo de fotografía</b> y participación en <b>spots comerciales</b>. Además de mi faceta
-      como modelo, la danza y la acrobacia son mi pasión, agregando una dimensión adicional a mi
-      expresión artística.
-    </p>
-    <p class="AboutView__contact__text">
-      Siempre estoy en búsqueda de la excelencia, participando en cursos y masterclass que me
-      permiten crecer como profesional. Te invito a explorar mi trabajo y a acompañarme en este
-      emocionante viaje creativo.
-    </p>
-    <div class="AboutView__contact">
-      <p class="AboutView__contact__text">Puedes encontrarme en</p>
-      <div class="AboutView__socialmedia">
-        <a href="#" target="_blank" rel="noopener" class="AboutView__icon instagram"></a>
-        <a href="#" target="_blank" rel="noopener" class="AboutView__icon whatsapp"></a>
-        <a href="#" target="_blank" rel="noopener" class="AboutView__icon facebook"></a>
+  <video-background src="bg.mp4" class="AboutView">
+    <div class="AboutView__content">
+      <p class="AboutView__contact__text">¡Hola! soy Enxing.</p>
+      <p class="AboutView__contact__text">
+        Actualmente me encuentro en una emocionante etapa de mi vida, inmersa en mi formación en
+        artes escénicas en la ESAD de Málaga.
+      </p>
+      <p class="AboutView__contact__text">
+        Desde temprana edad, he encontrado en el mundo creativo un camino para explorar el poder de
+        la imagen y desarrollar mi creatividad. Mi recorrido incluye experiencia como
+        <b>modelo de fotografía</b> y participación en <b>spots comerciales</b>. Además de mi faceta
+        como modelo, la danza y la acrobacia son mi pasión, añadiendo una dimensión adicional a mi
+        expresión artística.
+      </p>
+      <p class="AboutView__contact__text">
+        Siempre estoy en búsqueda de la excelencia, participando en cursos y masterclass que me
+        permiten crecer como profesional. Te invito a explorar mi trabajo y a acompañarme en este
+        emocionante viaje creativo.
+      </p>
+      <div class="AboutView__contact">
+        <p class="AboutView__contact__text">Puedes encontrarme en</p>
+        <div class="AboutView__socialmedia">
+          <a href="#" target="_blank" rel="noopener" class="AboutView__icon instagram"></a>
+          <a href="#" target="_blank" rel="noopener" class="AboutView__icon whatsapp"></a>
+          <a href="#" target="_blank" rel="noopener" class="AboutView__icon facebook"></a>
+        </div>
       </div>
     </div>
-  </div>
+  </video-background>
 </template>
 
 <style scoped lang="scss">
 .AboutView {
-  background: linear-gradient(-45deg, #FF008E, #D22779, #612897, #0C1E7F);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
-  height: 100vh;
   height: calc(100vh - 4rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 3rem 1.5rem;
+  align-items: center;
   color: #fff;
+
+  &__content {
+    padding: 2rem;
+  }
 
   &__contact {
     display: flex;
@@ -86,6 +88,15 @@
 }
 
 @media (min-width: 1024px) {
+  .AboutView {
+    &__content {
+      padding: 15%;
+    }
+
+    &__socialmedia {
+      max-width: 35%;
+    }
+  }
 }
 
 @keyframes gradient {
