@@ -10,7 +10,7 @@ const { contentImage } = defineProps({
 </script>
 
 <template>
-  <div class="ContentSection">
+  <div class="ContentSection" @click="openBook">
     <div class="ContentSection__polaroid">
       <img :src="contentImage" class="ContentSection__polaroid__image" />
       <div class="ContentSection__content">
@@ -79,8 +79,8 @@ const { contentImage } = defineProps({
         transition: transform 0.3s ease;
 
         &:hover {
-          transform: scale(0.9);
-          object-fit: contain;
+          transform: scale(2) translateY(18%);
+          object-fit: cover;
         }
       }
     }

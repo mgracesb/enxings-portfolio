@@ -8,25 +8,24 @@
 
 <script setup>
 import ContentSection from '@/components/molecules/ContentSection.vue'
-import BlackImg from '@/assets/photos/black.png'
-import WhiteImg from '@/assets/photos/white.png'
-import CamelImg from '@/assets/photos/camel.png'
-import BlueImg from '@/assets/photos/blue.png'
-import PurpleImg from '@/assets/photos/purple.png'
-import YellowImg from '@/assets/photos/yellow.png'
-import OrangeImg from '@/assets/photos/orange.png'
-import PinkImg from '@/assets/photos/pink.png'
+import BlackImgCover from '@/assets/photos/black/black-1.jpg'
+import PopImgCover from '@/assets/photos/pop/pop-1.jpg'
+import WhiteImgCover from '@/assets/photos/white/white-1.jpg'
+import RedImgCover from '@/assets/photos/red/red-1.jpg'
+import GreenImgCover from '@/assets/photos/green/green-1.jpg'
+import PinkImgCover from '@/assets/photos/pink/pink-1.jpg'
+import CamelImgCover from '@/assets/photos/camel/camel-1.jpg'
+
 import { onMounted, ref } from 'vue'
 
 const sectionRefs = ref([
-  { id: 'black', image: BlackImg },
-  { id: 'white', image: WhiteImg },
-  { id: 'camel', image: CamelImg },
-  { id: 'pink', image: PinkImg },
-  { id: 'blue', image: BlueImg },
-  { id: 'yellow', image: YellowImg },
-  { id: 'orange', image: OrangeImg },
-  { id: 'purple', image: PurpleImg }
+  { id: 'black', image: BlackImgCover },
+  { id: 'pop', image: PopImgCover },
+  { id: 'white', image: WhiteImgCover },
+  { id: 'red', image: RedImgCover },
+  { id: 'green', image: GreenImgCover },
+  { id: 'pink', image: PinkImgCover },
+  { id: 'camel', image: CamelImgCover }
 ])
 
 const observer = ref(null)
@@ -72,32 +71,29 @@ onMounted(() => {
   &.black {
     background-color: #181818;
   }
+
+  &.pop {
+    background-color: #5e02b1;
+  }
+
   &.white {
     background-color: #e1e3e7;
   }
 
-  &.camel {
-    background-color: #d2b38a;
+  &.red {
+    background-color: #aa0305;
   }
 
-  &.blue {
-    background-color: #013894;
+  &.green {
+    background-color: rgb(113, 113, 18);
   }
 
   &.pink {
-    background-color: #c32c4f;
+    background-color: #ce0e57;
   }
 
-  &.yellow {
-    background-color: #e6e409;
-  }
-
-  &.orange {
-    background-color: #cd7d29;
-  }
-
-  &.purple {
-    background-color: #6907be;
+  &.camel {
+    background-color: #D7A68C;
   }
 
   section {
