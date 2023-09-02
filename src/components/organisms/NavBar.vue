@@ -16,6 +16,7 @@ import { RouterLink } from 'vue-router'
 
 <style scoped lang="scss">
 @import '@/styles/breakpoints.scss';
+@import '@/styles/colors.scss';
 
 .NavBar {
   display: flex;
@@ -27,6 +28,8 @@ import { RouterLink } from 'vue-router'
   position: sticky;
   border-bottom: 1px solid rgba(182, 182, 182, 0.7);
   letter-spacing: 1px;
+  z-index: 100;
+  background-color: $color__dark;
 
   @media (min-width: $desktop) {
     flex-direction: row;

@@ -1,12 +1,20 @@
 <template>
   <div class="Home" :class="bgColor">
-    <section v-for="(sectionRef, index) in sectionRefs" :key="index" :id="sectionRef.id">
+    <section
+      v-for="(sectionRef, index) in sectionRefs"
+      :key="index"
+      :id="sectionRef.id"
+      @click="goToBook(sectionRef.id)"
+    >
       <ContentSection :contentImage="sectionRef.image" />
     </section>
   </div>
 </template>
 
 <script setup>
+import router from '@/router/index.js'
+import { onMounted, ref } from 'vue'
+
 import ContentSection from '@/components/molecules/ContentSection.vue'
 import BlackImgCover from '@/assets/photos/black/black-1.jpg'
 import PopImgCover from '@/assets/photos/pop/pop-1.jpg'
@@ -15,8 +23,6 @@ import RedImgCover from '@/assets/photos/red/red-1.jpg'
 import GreenImgCover from '@/assets/photos/green/green-1.jpg'
 import PinkImgCover from '@/assets/photos/pink/pink-1.jpg'
 import CamelImgCover from '@/assets/photos/camel/camel-1.jpg'
-
-import { onMounted, ref } from 'vue'
 
 const sectionRefs = ref([
   { id: 'black', image: BlackImgCover },
@@ -40,6 +46,11 @@ const handleIntersect = (entries) => {
       bgColor.value = intersectedSection.id
     }
   })
+}
+
+const goToBook = (id) => {
+  console.log('id', id)
+  router.push({ name: 'book', params: { id } })
 }
 
 onMounted(() => {

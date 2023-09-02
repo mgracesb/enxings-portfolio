@@ -1,11 +1,11 @@
 <template>
   <nav class="MobileNavBar" role="navigation">
     <div class="MobileNavBar__menu">
-      <input type="checkbox" />
+      <input type="checkbox" @click="handleMenu" :checked="isMenuOpen" />
       <span></span>
       <span></span>
       <span></span>
-      <div class="MobileNavBar__menu__items">
+      <div class="MobileNavBar__menu__items" @click="handleMenu">
         <RouterLink to="/"><h1>ENXING SHYU</h1></RouterLink>
         <RouterLink to="/al-natural">Al natural</RouterLink>
         <RouterLink to="/performance">Performance</RouterLink>
@@ -16,8 +16,21 @@
   </nav>
 </template>
 
-<script setup>
-import { RouterLink } from 'vue-router'
+<script>
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  emits: ['handle-menu'],
+  props: { isMenuOpen: Boolean },
+  setup(props, { emit }) {
+    const handleMenu = () => {
+      console.log('handle', props.isMenuOpen)
+      emit('handle-menu')
+    }
+
+    return { handleMenu }
+  }
+})
 </script>
 
 <style scoped lang="scss">
@@ -35,6 +48,10 @@ import { RouterLink } from 'vue-router'
     z-index: 22;
 
     a {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
       transition: all 0.3s ease;
 
       &:focus,

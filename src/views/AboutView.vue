@@ -31,13 +31,15 @@
 </template>
 
 <style scoped lang="scss">
+@import '@/styles/colors.scss';
+
 .AboutView {
-  height: calc(100vh - 4rem);
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: $color__white;
 
   &__content {
     padding: 2rem;

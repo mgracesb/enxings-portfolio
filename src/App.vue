@@ -1,7 +1,11 @@
 <template>
   <header>
     <NavBar v-if="deviceType === 'Desktop'" />
-    <MobileNavBar v-if="deviceType !== 'Desktop'" />
+    <MobileNavBar
+      v-if="deviceType !== 'Desktop'"
+      :isMenuOpen="isMenuOpen"
+      @handle-menu="toggleMenu"
+    />
   </header>
   <RouterView />
 </template>
@@ -33,15 +37,20 @@ const checkDeviceType = () => {
   }
 }
 
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value
+}
+
 const closeMobileMenu = () => {
-  console.log('close')
+  isMenuOpen.value = false
 }
 
 const handleClickOutside = (event) => {
-  console.log('---handleClickOutside')
   const mobileNavBar = document.querySelector('.MobileNavBar')
+  console.log('-close', mobileNavBar)
 
   if (isMenuOpen.value && mobileNavBar && !mobileNavBar.contains(event.target)) {
+    console.log('close')
     closeMobileMenu()
   }
 }
