@@ -47,10 +47,8 @@ const closeMobileMenu = () => {
 
 const handleClickOutside = (event) => {
   const mobileNavBar = document.querySelector('.MobileNavBar')
-  console.log('-close', mobileNavBar)
 
   if (isMenuOpen.value && mobileNavBar && !mobileNavBar.contains(event.target)) {
-    console.log('close')
     closeMobileMenu()
   }
 }

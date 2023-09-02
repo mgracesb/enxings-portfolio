@@ -22,9 +22,8 @@ import { defineComponent } from 'vue'
 export default defineComponent({
   emits: ['handle-menu'],
   props: { isMenuOpen: Boolean },
-  setup(props, { emit }) {
+  setup(_, { emit }) {
     const handleMenu = () => {
-      console.log('handle', props.isMenuOpen)
       emit('handle-menu')
     }
 

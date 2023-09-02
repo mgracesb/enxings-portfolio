@@ -49,7 +49,6 @@ const handleIntersect = (entries) => {
 }
 
 const goToBook = (id) => {
-  console.log('id', id)
   router.push({ name: 'book', params: { id } })
 }
 
