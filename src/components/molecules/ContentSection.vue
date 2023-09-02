@@ -23,6 +23,7 @@ const { contentImage } = defineProps({
 
 <style scoped lang="scss">
 @import '@/styles/breakpoints.scss';
+@import '@/styles/colors.scss';
 
 .ContentSection {
   width: 100%;
@@ -36,7 +37,7 @@ const { contentImage } = defineProps({
   &__polaroid {
     width: 70%;
     height: 70%;
-    border: 5px solid #fff;
+    border: 5px solid $color__white;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 80% 20%;
@@ -60,7 +61,7 @@ const { contentImage } = defineProps({
     justify-content: center;
     align-items: flex-end;
     color: #000;
-    background-color: #fff;
+    background-color: $color__white;
     padding: 0 0.75rem;
 
     &__date {
@@ -73,7 +74,7 @@ const { contentImage } = defineProps({
       width: 35%;
       height: 85%;
       overflow: hidden;
-      background-color: #fff;
+      background-color: $color__white;
 
       &__image {
         transition: transform 0.3s ease;
@@ -83,6 +84,13 @@ const { contentImage } = defineProps({
           object-fit: cover;
         }
       }
+    }
+  }
+
+  @include ipad-portrait {
+    &__polaroid {
+      width: 60%;
+      height: 70%;
     }
   }
 }

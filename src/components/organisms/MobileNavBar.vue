@@ -21,6 +21,8 @@ import { RouterLink } from 'vue-router'
 </script>
 
 <style scoped lang="scss">
+@import '@/styles/colors.scss';
+
 .MobileNavBar {
   &__menu {
     display: block;
@@ -37,7 +39,7 @@ import { RouterLink } from 'vue-router'
 
       &:focus,
       :active {
-        color: #b715ac;
+        color: $color__primary;
       }
     }
 
@@ -99,8 +101,6 @@ import { RouterLink } from 'vue-router'
       align-items: flex-end;
 
       a {
-        color: #eee;
-
         &:hover {
           padding-left: 5px;
         }
@@ -112,7 +112,7 @@ import { RouterLink } from 'vue-router'
     &:checked ~ span {
       opacity: 1;
       transform: rotate(45deg) translate(-3px, 0);
-      background: #b715ac;
+      background: $color__primary;
 
       &:nth-last-child(3) {
         opacity: 0;

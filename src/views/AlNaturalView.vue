@@ -1,25 +1,56 @@
 <template>
   <div class="AlNaturalView">
-    <div class="AlNaturalView__composition">
-      <img
-        :src="firstImage"
-        alt="photo 1"
-        class="AlNaturalView__composition__photo AlNaturalView__composition__photo--p1"
-      />
-      <img
-        :src="secondImage"
-        alt="photo 2"
-        class="AlNaturalView__composition__photo AlNaturalView__composition__photo--p2"
-      />
-      <img
-        :src="thirdImage"
-        alt="photo 3"
-        class="AlNaturalView__composition__photo AlNaturalView__composition__photo--p3"
-      />
+    <div class="AlNaturalView__container">
+      <div class="AlNaturalView__composition">
+        <img
+          :src="secondImage"
+          alt="photo 2"
+          class="AlNaturalView__composition__photo AlNaturalView__composition__photo--p2"
+        />
 
-      <span class="AlNaturalView__composition__information">Estatura: 1.54m</span>
-      <span class="AlNaturalView__composition__information">Peso:</span>
-      <span class="AlNaturalView__composition__information">HIHIHI</span>
+        <img
+          :src="thirdImage"
+          alt="photo 3"
+          class="AlNaturalView__composition__photo AlNaturalView__composition__photo--p3"
+        />
+
+        <img
+          :src="firstImage"
+          alt="photo 1"
+          class="AlNaturalView__composition__photo AlNaturalView__composition__photo--p1"
+        />
+      </div>
+    </div>
+    <div class="AlNaturalView__information">
+      <div>
+        <p class="AlNaturalView__information__item">
+          <span class="AlNaturalView__icon--height icon"></span>1.54m
+        </p>
+        <p class="AlNaturalView__information__item">
+          <span class="AlNaturalView__icon--weight icon"></span>45kg
+        </p>
+      </div>
+
+      <div class="AlNaturalView__information__item">
+        <span class="AlNaturalView__icon--sizing icon--big"></span>
+        <div>
+          <p class="AlNaturalView__information__item">Pecho: 76cm</p>
+          <p class="AlNaturalView__information__item">Cintura: 62.5cm</p>
+          <p class="AlNaturalView__information__item">Caderas: 81cm</p>
+        </div>
+      </div>
+
+      <div>
+        <p class="AlNaturalView__information__item">
+          <span class="AlNaturalView__icon--tops icon"></span>XS
+        </p>
+        <p class="AlNaturalView__information__item">
+          <span class="AlNaturalView__icon--bottoms icon"></span>34
+        </p>
+        <p class="AlNaturalView__information__item">
+          <span class="AlNaturalView__icon--shoes icon"></span>36
+        </p>
+      </div>
     </div>
   </div>
 </template>
@@ -32,15 +63,81 @@ import thirdImage from '@/assets/photos/natural/natural-3.jpg'
 
 <style scoped lang="scss">
 @import '@/styles/breakpoints.scss';
+@import '@/styles/colors.scss';
 
 .AlNaturalView {
+  position: relative;
   height: calc(100vh - 4rem);
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #fff;
-  overflow: hidden;
+
+  &__container {
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  &__icon {
+    &--height {
+      background-image: url('../assets/icons/height.png');
+    }
+
+    &--weight {
+      background-image: url('../assets/icons/weight.png');
+    }
+
+    &--sizing {
+      background-image: url('../assets/icons/sizing.png');
+    }
+
+    &--tops {
+      background-image: url('../assets/icons/tops.png');
+    }
+
+    &--bottoms {
+      background-image: url('../assets/icons/bottoms.png');
+    }
+
+    &--shoes {
+      background-image: url('../assets/icons/shoes.png');
+    }
+  }
+
+  &__information {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+
+    @media (min-width: $tablet) {
+      max-width: 800px;
+      margin: auto;
+      right: 0;
+      bottom: 5%;
+    }
+
+    &__item {
+      margin-bottom: 0.3rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-size: 0.75rem;
+      color: $color__clear;
+    }
+  }
 
   &__composition {
     width: 90%;
@@ -61,24 +158,24 @@ import thirdImage from '@/assets/photos/natural/natural-3.jpg'
       width: auto;
       object-fit: contain;
       border-radius: 2px;
-      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0.5rem 1rem $color__black__transparency--light;
 
       @media (min-width: $tablet) {
         height: 50%;
       }
 
       @media (min-width: $desktop) {
-        height: 80%;
+        height: 60%;
         width: auto;
-        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+        box-shadow: 0 0.5rem 1rem $color__black__transparency--medium;
         z-index: 10;
-        transition: all 0.2s;
+        transition: all 0.3s;
         outline-offset: 1rem;
       }
 
       &--p1 {
-        top: 40%;
-        left: 25%;
+        top: 25%;
+        left: 30%;
         transform: scale(1.2);
         transition: transform ease 300ms;
 
@@ -88,7 +185,7 @@ import thirdImage from '@/assets/photos/natural/natural-3.jpg'
         }
 
         @media (min-width: $big-mobile) and (max-width: $tablet) {
-          left: 35%;
+          left: 25%;
           transform: scale(1.4);
         }
 
@@ -107,10 +204,20 @@ import thirdImage from '@/assets/photos/natural/natural-3.jpg'
             transform: scale(1.6) rotate(-8deg);
           }
         }
+
+        @include ipad-portrait {
+          top: 25%;
+          left: 25%;
+          transform: scale(1);
+          &:hover,
+          :focus {
+            transform: scale(1.2);
+          }
+        }
       }
       &--p2 {
         right: 10%;
-        bottom: 0;
+        top: 40%;
         transform: scale(1.2) rotate(5deg);
         transition: transform ease 300ms;
 
@@ -138,11 +245,22 @@ import thirdImage from '@/assets/photos/natural/natural-3.jpg'
             transform: scale(1.6) rotate(8deg);
           }
         }
+
+        @include ipad-portrait {
+          top: 15%;
+          bottom: 0;
+          right: -5%;
+          transform: scale(1);
+          &:hover,
+          :focus {
+            transform: scale(1.2) rotate(8deg);
+          }
+        }
       }
       &--p3 {
         left: 10%;
         right: 0;
-        top: 15%;
+        top: 10%;
         transform: scale(1.2) rotate(-2deg);
         transition: transform ease 300ms;
 
@@ -168,10 +286,20 @@ import thirdImage from '@/assets/photos/natural/natural-3.jpg'
             transform: scale(1.6) translate3d(-1rem, 0, 2rem);
           }
         }
+
+        @include ipad-portrait {
+          left: -5%;
+          top: 5%;
+          transform: scale(1) rotate(-2deg);
+          &:hover,
+          :focus {
+            transform: scale(1.2) rotate(-8deg);
+          }
+        }
       }
       &:hover,
       :focus {
-        box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+        box-shadow: 0 2.5rem 4rem $color__black__transparency--medium;
         z-index: 20;
       }
     }
@@ -179,12 +307,26 @@ import thirdImage from '@/assets/photos/natural/natural-3.jpg'
       animation: gradient 1s ease;
       z-index: 19;
     }
+  }
+}
 
-    &__information {
-      color: #eee;
-      z-index: 30;
-      font-size: 4rem;
-    }
+span.icon {
+  display: inline-block;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 0.3rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--big {
+    display: inline-block;
+    margin-right: 0.3rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 2.5rem;
+    min-height: 3.5rem;
   }
 }
 

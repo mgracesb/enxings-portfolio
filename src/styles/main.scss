@@ -1,5 +1,6 @@
 @import './base.css';
 @import './text.scss';
+@import './colors.scss';
 @import './breakpoints.scss';
 @import './components/videobg.scss';
 
@@ -9,7 +10,12 @@
 
 html,
 body {
-  background-color: #222832;
+  background-color: $color__dark;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
 }
 
 h1,
@@ -23,6 +29,6 @@ h3 {
 }
 
 a {
-  color: #fff;
+  color: $color__clear;
   text-decoration: none;
 }

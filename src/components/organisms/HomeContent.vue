@@ -81,19 +81,19 @@ onMounted(() => {
   }
 
   &.red {
-    background-color: #BD0502;
+    background-color: #bd0502;
   }
 
   &.green {
-    background-color: #8AAE92;
+    background-color: #8aae92;
   }
 
   &.pink {
-    background-color: #C64E7B;
+    background-color: #bd7ea7;
   }
 
   &.camel {
-    background-color: #D9C2B8;
+    background-color: #d9c2b8;
   }
 
   section {
