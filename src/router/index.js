@@ -10,8 +10,23 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/about',
-      name: 'about',
+      path: '/al-natural',
+      name: 'al-natural',
+      component: () => import('../views/AlNaturalView.vue')
+    },
+    {
+      path: '/performance',
+      name: 'performance',
+      component: () => import('../views/AboutView.vue')
+    },
+    {
+      path: '/spots',
+      name: 'spots',
+      component: () => import('../views/AboutView.vue')
+    },
+    {
+      path: '/sobre-mi',
+      name: 'sobre-mi',
       component: () => import('../views/AboutView.vue')
     },
     {

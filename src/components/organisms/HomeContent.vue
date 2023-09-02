@@ -73,7 +73,7 @@ onMounted(() => {
   }
 
   &.pop {
-    background-color: #5e02b1;
+    background-color: #dbea07;
   }
 
   &.white {
@@ -81,19 +81,19 @@ onMounted(() => {
   }
 
   &.red {
-    background-color: #aa0305;
+    background-color: #BD0502;
   }
 
   &.green {
-    background-color: rgb(113, 113, 18);
+    background-color: #8AAE92;
   }
 
   &.pink {
-    background-color: #ce0e57;
+    background-color: #C64E7B;
   }
 
   &.camel {
-    background-color: #D7A68C;
+    background-color: #D9C2B8;
   }
 
   section {
