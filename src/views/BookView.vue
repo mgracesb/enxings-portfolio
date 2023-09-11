@@ -4,7 +4,7 @@
       <img
         v-for="(image, index) in bookImages"
         :key="index"
-        :src="`/src/assets/photos/${bookID}/${bookID}-${image}.jpg`"
+        :src="getImagePath(bookID, image)"
         class="BookView__grid__item"
       />
     </div>
@@ -14,7 +14,7 @@
 <script setup>
 import { onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
-import DummyStore from '../store/DummyStore.json'
+import DummyStore from '@/store/DummyStore.json'
 
 const bookID = ref()
 const bookImages = ref([])
@@ -29,6 +29,11 @@ onMounted(() => {
     bookImages.value = imageList.DummyStore[bookID.value]
   }
 })
+
+const getImagePath = (bookID, image) => {
+  const path = new URL('@/assets/photos/', import.meta.url)
+  return `${path}/${bookID}/${bookID}-${image}.jpg`
+}
 </script>
 
 <style scoped lang="scss">
