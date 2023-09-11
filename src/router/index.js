@@ -22,7 +22,7 @@ const router = createRouter({
     {
       path: '/spots',
       name: 'spots',
-      component: () => import('../views/AboutView.vue')
+      component: () => import('../views/SpotsView.vue')
     },
     {
       path: '/sobre-mi',

@@ -24,6 +24,7 @@ onMounted(() => {
   const route = useRoute()
   bookID.value = route.params.id
 
+  // eslint-disable-next-line no-prototype-builtins
   if (imageList.DummyStore.hasOwnProperty(bookID.value)) {
     bookImages.value = imageList.DummyStore[bookID.value]
   }

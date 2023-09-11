@@ -1,5 +1,5 @@
 <template>
-  <video-background src="bg.mp4" class="AboutView">
+  <video-background src="bg.mp4" class="AboutView" autoplay muted loop>
     <div class="AboutView__content">
       <p class="AboutView__contact__text">¡Hola! soy Enxing.</p>
       <p class="AboutView__contact__text">

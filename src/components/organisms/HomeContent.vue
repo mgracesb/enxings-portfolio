@@ -1,12 +1,7 @@
 <template>
   <div class="Home" :class="bgColor">
-    <section
-      v-for="(sectionRef, index) in sectionRefs"
-      :key="index"
-      :id="sectionRef.id"
-      @click="goToBook(sectionRef.id)"
-    >
-      <ContentSection :contentImage="sectionRef.image" />
+    <section v-for="(sectionRef, index) in sectionRefs" :key="index" :id="sectionRef.id">
+      <ContentSection :contentImage="sectionRef.image" @click="goToBook(sectionRef.id)" />
     </section>
   </div>
 </template>
@@ -23,6 +18,7 @@ import RedImgCover from '@/assets/photos/red/red-1.jpg'
 import GreenImgCover from '@/assets/photos/green/green-1.jpg'
 import PinkImgCover from '@/assets/photos/pink/pink-1.jpg'
 import CamelImgCover from '@/assets/photos/camel/camel-1.jpg'
+import MoreImgCover from '@/assets/photos/more/more-1.jpg'
 
 const sectionRefs = ref([
   { id: 'black', image: BlackImgCover },
@@ -31,7 +27,8 @@ const sectionRefs = ref([
   { id: 'red', image: RedImgCover },
   { id: 'green', image: GreenImgCover },
   { id: 'pink', image: PinkImgCover },
-  { id: 'camel', image: CamelImgCover }
+  { id: 'camel', image: CamelImgCover },
+  { id: 'more', image: MoreImgCover }
 ])
 
 const observer = ref(null)
@@ -70,6 +67,8 @@ onMounted(() => {
 </script>
 
 <style scoped lang="scss">
+@import '@/styles/colors.scss';
+
 .Home {
   overflow: scroll;
   scroll-snap-type: mandatory;
@@ -79,11 +78,11 @@ onMounted(() => {
   transition: background-color 0.2s ease;
 
   &.black {
-    background-color: #181818;
+    background-color: $color__dark;
   }
 
   &.pop {
-    background-color: #dbea07;
+    background-color: #B8B321;
   }
 
   &.white {
@@ -104,6 +103,10 @@ onMounted(() => {
 
   &.camel {
     background-color: #d9c2b8;
+  }
+
+  &.more {
+    background-color: $color__dark;
   }
 
   section {
