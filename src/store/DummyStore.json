@@ -1,6 +1,7 @@
 {
   "DummyStore": {
     "black": [1, 2, 3],
+    "chance": [1, 2, 3, 4],
     "camel": [1, 2, 3, 4],
     "green": [1, 2, 3, 4],
     "natural": [1, 2, 3],

@@ -1,7 +1,7 @@
 <template>
   <div class="Home" :class="bgColor">
     <section v-for="(sectionRef, index) in sectionRefs" :key="index" :id="sectionRef.id">
-      <ContentSection :contentImage="sectionRef.image" @click="goToBook(sectionRef.id)" />
+      <ContentSection :contentImage="sectionRef.image" :title="sectionRef.title" @click="goToBook(sectionRef.id)" />
     </section>
   </div>
 </template>
@@ -19,16 +19,19 @@ import GreenImgCover from '@/assets/photos/green/green-1.jpg'
 import PinkImgCover from '@/assets/photos/pink/pink-1.jpg'
 import CamelImgCover from '@/assets/photos/camel/camel-1.jpg'
 import MoreImgCover from '@/assets/photos/more/more-1.jpg'
+import ChanceImgCover from '@/assets/photos/chance/chance-1.jpg'
+
 
 const sectionRefs = ref([
-  { id: 'black', image: BlackImgCover },
-  { id: 'pop', image: PopImgCover },
-  { id: 'white', image: WhiteImgCover },
-  { id: 'red', image: RedImgCover },
-  { id: 'green', image: GreenImgCover },
-  { id: 'pink', image: PinkImgCover },
-  { id: 'camel', image: CamelImgCover },
-  { id: 'more', image: MoreImgCover }
+  { id: 'black', image: BlackImgCover, title: 'Black' },
+  { id: 'chance', image: ChanceImgCover, title: 'Chance' },
+  { id: 'pop', image: PopImgCover, title: '' },
+  { id: 'white', image: WhiteImgCover, title: 'Ivory' },
+  { id: 'red', image: RedImgCover, title: 'Rojo' },
+  { id: 'green', image: GreenImgCover, title: 'Menta' },
+  { id: 'pink', image: PinkImgCover, title: 'Pink' },
+  { id: 'camel', image: CamelImgCover, title: 'Camel' },
+  { id: 'more', image: MoreImgCover, title: 'Más' }
 ])
 
 const observer = ref(null)
@@ -59,6 +62,7 @@ onMounted(() => {
   observer.value = new IntersectionObserver(handleIntersect, options)
   sectionRefs.value.forEach((sectionRef) => {
     const sectionElement = document.getElementById(sectionRef.id)
+
     if (sectionElement) {
       observer.value.observe(sectionElement)
     }
@@ -76,6 +80,10 @@ onMounted(() => {
   scroll-snap-type: y mandatory;
   height: 100%;
   transition: background-color 0.2s ease;
+
+  &.chance {
+    background-color: #D1C1BE;
+  }
 
   &.black {
     background-color: $color__dark;

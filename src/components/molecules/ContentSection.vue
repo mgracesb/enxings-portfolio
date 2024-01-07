@@ -1,3 +1,14 @@
+<template>
+  <div class="ContentSection" @click="openBook">
+    <div class="ContentSection__polaroid">
+      <img :src="contentImage" class="ContentSection__polaroid__image" />
+      <div class="ContentSection__content">
+        <p class="ContentSection__content__text">{{title}}</p>
+      </div>
+    </div>
+  </div>
+</template>
+
 <script setup>
 import { defineProps } from 'vue'
 
@@ -5,21 +16,13 @@ const { contentImage } = defineProps({
   contentImage: {
     type: String,
     required: true
+  },
+  title: {
+    type: String,
+    required: true
   }
 })
 </script>
-
-<template>
-  <div class="ContentSection" @click="openBook">
-    <div class="ContentSection__polaroid">
-      <img :src="contentImage" class="ContentSection__polaroid__image" />
-      <div class="ContentSection__content">
-        <p class="ContentSection__content__text">Nombre de sesión</p>
-        <p class="ContentSection__content__date">xx.xx.xxxx</p>
-      </div>
-    </div>
-  </div>
-</template>
 
 <style scoped lang="scss">
 @import '@/styles/breakpoints.scss';
@@ -35,6 +38,7 @@ const { contentImage } = defineProps({
   animation: appear 1s ease 0s 1 normal forwards;
 
   &__polaroid {
+    cursor: pointer;
     width: 70%;
     height: 70%;
     border: 5px solid $color__white;

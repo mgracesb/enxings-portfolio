@@ -1,5 +1,8 @@
 <template>
   <div class="BookView">
+    <span class="BookView__button" @click="goBackHome">
+      <img class="BookView__image" src="../assets/icons/back.png"/> atrás
+    </span>
     <div class="BookView__grid">
       <img
         v-for="(image, index) in bookImages"
@@ -15,6 +18,7 @@
 import { onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import DummyStore from '@/store/DummyStore.json'
+import router from '@/router/index.js'
 
 const bookID = ref()
 const bookImages = ref([])
@@ -31,8 +35,12 @@ onMounted(() => {
 })
 
 const getImagePath = (bookID, image) => {
-  const path = new URL('@/assets/photos/', import.meta.url)
-  return `${path}/${bookID}/${bookID}-${image}.jpg`
+  // const path = new URL('assets/photos/', import.meta.url)
+  return `/enxings-portfolio/photos/${bookID}/${bookID}-${image}.jpg`
+}
+
+const goBackHome = () => {
+  router.push({name: 'home'})
 }
 </script>
 
@@ -41,6 +49,7 @@ const getImagePath = (bookID, image) => {
 @import '@/styles/colors';
 
 .BookView {
+  position: relative;
   background-color: $color__clear;
   padding-top: 2rem;
   padding-bottom: 1rem;
@@ -67,6 +76,30 @@ const getImagePath = (bookID, image) => {
       height: auto;
       object-fit: cover;
     }
+  }
+
+  &__button {
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    font-size: 14px;
+    border-radius: 50%;
+    background-color: white;
+    color: black;
+    box-shadow: 1px 3px 3px #999;
+    bottom: 3rem;
+    right: 3rem;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__image {
+    width: 1rem;
+    height: auto;
+    margin-right: 5px;
   }
 
   @media (min-width: $desktop) {
