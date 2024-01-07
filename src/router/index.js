@@ -17,7 +17,7 @@ const router = createRouter({
     {
       path: '/performance',
       name: 'performance',
-      component: () => import('../views/AboutView.vue')
+      component: () => import('../views/PerformanceView.vue')
     },
     {
       path: '/spots',

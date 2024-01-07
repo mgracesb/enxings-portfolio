@@ -11,7 +11,7 @@ import router from '@/router/index.js'
 import { onMounted, ref } from 'vue'
 
 import ContentSection from '@/components/molecules/ContentSection.vue'
-import BlackImgCover from '@/assets/photos/black/black-1.jpg'
+import EleganceImgCover from '@/assets/photos/elegance/elegance-1.jpg'
 import PopImgCover from '@/assets/photos/pop/pop-1.jpg'
 import WhiteImgCover from '@/assets/photos/white/white-1.jpg'
 import RedImgCover from '@/assets/photos/red/red-1.jpg'
@@ -23,7 +23,7 @@ import ChanceImgCover from '@/assets/photos/chance/chance-1.jpg'
 
 
 const sectionRefs = ref([
-  { id: 'black', image: BlackImgCover, title: 'Black' },
+  { id: 'elegance', image: EleganceImgCover, title: 'Elegance' },
   { id: 'chance', image: ChanceImgCover, title: 'Chance' },
   { id: 'pop', image: PopImgCover, title: '' },
   { id: 'white', image: WhiteImgCover, title: 'Ivory' },
@@ -35,7 +35,7 @@ const sectionRefs = ref([
 ])
 
 const observer = ref(null)
-const bgColor = ref('black')
+const bgColor = ref('elegance')
 
 const handleIntersect = (entries) => {
   entries.forEach((entry) => {
@@ -85,7 +85,7 @@ onMounted(() => {
     background-color: #D1C1BE;
   }
 
-  &.black {
+  &.elegance {
     background-color: $color__dark;
   }
 

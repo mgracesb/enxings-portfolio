@@ -1,6 +1,6 @@
 {
   "DummyStore": {
-    "black": [1, 2, 3],
+    "elegance": [1, 2, 3],
     "chance": [1, 2, 3, 4],
     "camel": [1, 2, 3, 4],
     "green": [1, 2, 3, 4],
@@ -10,5 +10,9 @@
     "red": [1, 2, 3],
     "white": [1, 2, 3],
     "more": [1, 2, 3, 4, 5, 6, 7, 8, 9]
+  },
+  "DummyPerformance": {
+    "images": [1, 2, 3, 4, 5, 6, 7],
+    "videos": [1, 2]
   }
 }

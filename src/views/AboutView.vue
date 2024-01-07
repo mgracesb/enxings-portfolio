@@ -22,8 +22,7 @@
         <p class="AboutView__contact__text">Puedes encontrarme en</p>
         <div class="AboutView__socialmedia">
           <a href="#" target="_blank" rel="noopener" class="AboutView__icon instagram"></a>
-          <a href="#" target="_blank" rel="noopener" class="AboutView__icon whatsapp"></a>
-          <a href="#" target="_blank" rel="noopener" class="AboutView__icon facebook"></a>
+          <a href="https://www.facebook.com/Nxingsb02" target="_blank" rel="noopener" class="AboutView__icon facebook"></a>
         </div>
       </div>
     </div>
@@ -58,11 +57,11 @@
   }
 
   &__socialmedia {
-    width: 100%;
+    width: 100px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
 
   &__icon {
