@@ -21,7 +21,7 @@
       <div class="AboutView__contact">
         <p class="AboutView__contact__text">Puedes encontrarme en</p>
         <div class="AboutView__socialmedia">
-          <a href="#" target="_blank" rel="noopener" class="AboutView__icon instagram"></a>
+          <a href="https://www.instagram.com/ensi_sb02" target="_blank" rel="noopener" class="AboutView__icon instagram"></a>
           <a href="https://www.facebook.com/Nxingsb02" target="_blank" rel="noopener" class="AboutView__icon facebook"></a>
         </div>
       </div>
