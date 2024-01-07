@@ -9,7 +9,12 @@ import HomeContent from '@/components/organisms/HomeContent.vue'
 </template>
 
 <style scoped lang="scss">
+@import '@/styles/breakpoints';
+
 main {
-  height: calc(100vh - 4rem);
+  height: 100%;
+  @media (min-width: $desktop) {
+    height: calc(100vh - 4rem);
+  }
 }
 </style>

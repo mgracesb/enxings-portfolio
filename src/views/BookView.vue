@@ -49,11 +49,11 @@ const goBackHome = () => {
 @import '@/styles/colors';
 
 .BookView {
+  height: 100%;
   position: relative;
   background-color: $color__clear;
   padding-top: 2rem;
   padding-bottom: 1rem;
-  height: calc(100vh - 4rem);
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -103,6 +103,7 @@ const goBackHome = () => {
   }
 
   @media (min-width: $desktop) {
+    height: calc(100vh - 4rem);
     &__grid {
       padding: 5%;
       grid-template-columns: repeat(2, 1fr);

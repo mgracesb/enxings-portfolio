@@ -14,7 +14,7 @@ import ContentSection from '@/components/molecules/ContentSection.vue'
 import EleganceImgCover from '@/assets/photos/elegance/elegance-1.jpg'
 import PopImgCover from '@/assets/photos/pop/pop-1.jpg'
 import WhiteImgCover from '@/assets/photos/white/white-1.jpg'
-import RedImgCover from '@/assets/photos/red/red-1.jpg'
+import FlameImgCover from '@/assets/photos/flame/flame-1.jpg'
 import GreenImgCover from '@/assets/photos/green/green-1.jpg'
 import PinkImgCover from '@/assets/photos/pink/pink-1.jpg'
 import CamelImgCover from '@/assets/photos/camel/camel-1.jpg'
@@ -25,13 +25,13 @@ import ChanceImgCover from '@/assets/photos/chance/chance-1.jpg'
 const sectionRefs = ref([
   { id: 'elegance', image: EleganceImgCover, title: 'Elegance' },
   { id: 'chance', image: ChanceImgCover, title: 'Chance' },
-  { id: 'pop', image: PopImgCover, title: '' },
+  { id: 'pop', image: PopImgCover, title: 'Neon' },
   { id: 'white', image: WhiteImgCover, title: 'Ivory' },
-  { id: 'red', image: RedImgCover, title: 'Rojo' },
-  { id: 'green', image: GreenImgCover, title: 'Menta' },
+  { id: 'flame', image: FlameImgCover, title: 'Flame' },
+  { id: 'green', image: GreenImgCover, title: 'Mint' },
   { id: 'pink', image: PinkImgCover, title: 'Pink' },
   { id: 'camel', image: CamelImgCover, title: 'Camel' },
-  { id: 'more', image: MoreImgCover, title: 'Más' }
+  { id: 'more', image: MoreImgCover, title: 'More' }
 ])
 
 const observer = ref(null)
@@ -97,7 +97,7 @@ onMounted(() => {
     background-color: #e1e3e7;
   }
 
-  &.red {
+  &.flame {
     background-color: #bd0502;
   }
 
