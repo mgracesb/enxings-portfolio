@@ -3,23 +3,26 @@
     <div class="ContentSection__polaroid">
       <img :src="contentImage" class="ContentSection__polaroid__image" />
       <div class="ContentSection__content">
-        <p class="ContentSection__content__text">{{title}}</p>
+        <p class="ContentSection__content__text">Album {{ title }}</p>
+        <p class="ContentSection__content__text--small">++ ver más ++</p>
       </div>
     </div>
   </div>
 </template>
 
-<script setup>
-import { defineProps } from 'vue'
+<script>
+import { defineComponent } from 'vue'
 
-const { contentImage } = defineProps({
-  contentImage: {
-    type: String,
-    required: true
-  },
-  title: {
-    type: String,
-    required: true
+export default defineComponent({
+  props: {
+    contentImage: {
+      type: String,
+      required: true
+    },
+    title: {
+      type: String,
+      required: true
+    }
   }
 })
 </script>
@@ -70,6 +73,13 @@ const { contentImage } = defineProps({
 
     &__date {
       font-size: 0.75rem;
+    }
+    &__text {
+      &--small {
+        font-size: 0.75rem;
+        color: rgb(47, 47, 255);
+        font-style: italic;
+      }
     }
   }
 

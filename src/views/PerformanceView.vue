@@ -4,24 +4,23 @@
       <div class="PerformanceView__images">
         <img v-for="image in bookImages" class="PerformanceView__image" :key="image" :src="image" />
       </div>
-      <div class="PerformanceView__videos">
+      <!-- <div class="PerformanceView__videos">
         <VideoPlayer vid="/performance-2.mp4"/>
-        <VideoPlayer vid="/performance-1.mp4"/>
-      </div>
+        <VideoPlayer vid="performance-1.mp4"/>
+      </div> -->
     </div>
   </div>
 </template>
 
 <script>
 import { defineComponent } from 'vue'
-
 import { onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import DummyStore from '../store/DummyStore.json'
-import VideoPlayer from '@/components/organisms/VideoPlayer.vue';
+// import VideoPlayer from '@/components/organisms/VideoPlayer.vue';
 
 export default defineComponent({
-  components: { VideoPlayer },
+  // components: { VideoPlayer },
   setup() {
     const bookID = ref()
     const bookImages = ref([])

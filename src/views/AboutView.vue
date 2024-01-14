@@ -4,7 +4,7 @@
       <p class="AboutView__contact__text">¡Hola! soy Enxing.</p>
       <p class="AboutView__contact__text">
         Actualmente me encuentro en una emocionante etapa de mi vida, inmersa en mi formación en
-        artes escénicas en la ESAD de Málaga.
+        arte dramático en la ESAD de Málaga.
       </p>
       <p class="AboutView__contact__text">
         Desde temprana edad, he encontrado en el mundo creativo un camino para explorar el poder de

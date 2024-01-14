@@ -7,6 +7,11 @@
           alt="photo 2"
           class="AlNaturalView__composition__photo AlNaturalView__composition__photo--p2"
         />
+        <img
+          :src="firstImage"
+          alt="photo 1"
+          class="AlNaturalView__composition__photo AlNaturalView__composition__photo--p1"
+        />
 
         <img
           :src="thirdImage"
@@ -15,9 +20,15 @@
         />
 
         <img
-          :src="firstImage"
-          alt="photo 1"
-          class="AlNaturalView__composition__photo AlNaturalView__composition__photo--p1"
+          :src="fourthImage"
+          alt="photo 4"
+          class="AlNaturalView__composition__photo AlNaturalView__composition__photo--p4"
+        />
+
+        <img
+          :src="fifthImage"
+          alt="photo 5"
+          class="AlNaturalView__composition__photo AlNaturalView__composition__photo--p5"
         />
       </div>
     </div>
@@ -34,7 +45,7 @@
       <div class="AlNaturalView__information__item">
         <span class="AlNaturalView__icon--sizing icon--big"></span>
         <div>
-          <p class="AlNaturalView__information__item">Pecho: 76cm</p>
+          <p class="AlNaturalView__information__item">Pecho: 78cm</p>
           <p class="AlNaturalView__information__item">Cintura: 62.5cm</p>
           <p class="AlNaturalView__information__item">Caderas: 81cm</p>
         </div>
@@ -59,6 +70,8 @@
 import firstImage from '@/assets/photos/natural/natural-1.jpg'
 import secondImage from '@/assets/photos/natural/natural-2.jpg'
 import thirdImage from '@/assets/photos/natural/natural-3.jpg'
+import fourthImage from '@/assets/photos/natural/natural-4.jpg'
+import fifthImage from '@/assets/photos/natural/natural-5.jpg'
 </script>
 
 <style scoped lang="scss">
@@ -174,90 +187,7 @@ import thirdImage from '@/assets/photos/natural/natural-3.jpg'
       }
 
       &--p1 {
-        top: 25%;
-        left: 30%;
-        transform: scale(1.2);
-        transition: transform ease 300ms;
-
-        &:hover,
-        :focus {
-          transform: scale(1.4);
-        }
-
-        @media (min-width: $big-mobile) and (max-width: $tablet) {
-          left: 25%;
-          transform: scale(1.4);
-        }
-
-        @media (min-width: $tablet) {
-          top: 25%;
-          left: 40%;
-        }
-
-        @media (min-width: $desktop) {
-          left: 5%;
-          top: 10%;
-          transform: scale(1.4) rotate(-5deg);
-
-          &:hover,
-          :focus {
-            transform: scale(1.6) rotate(-8deg);
-          }
-        }
-
-        @include ipad-portrait {
-          top: 25%;
-          left: 25%;
-          transform: scale(1);
-          &:hover,
-          :focus {
-            transform: scale(1.2);
-          }
-        }
-      }
-      &--p2 {
-        right: 10%;
-        top: 40%;
-        transform: scale(1.2) rotate(5deg);
-        transition: transform ease 300ms;
-
-        &:hover,
-        :focus {
-          transform: scale(1.4) rotate(8deg);
-        }
-
-        @media (min-width: $big-mobile) and (max-width: $tablet) {
-          right: 20%;
-          transform: scale(1.4) rotate(5deg);
-        }
-
-        @media (min-width: $tablet) {
-          bottom: 5%;
-        }
-
-        @media (min-width: $desktop) {
-          right: 5%;
-          top: 10%;
-          transform: scale(1.4) rotate(5deg);
-
-          &:hover,
-          :focus {
-            transform: scale(1.6) rotate(8deg);
-          }
-        }
-
-        @include ipad-portrait {
-          top: 15%;
-          bottom: 0;
-          right: -5%;
-          transform: scale(1);
-          &:hover,
-          :focus {
-            transform: scale(1.2) rotate(8deg);
-          }
-        }
-      }
-      &--p3 {
+        z-index: 3;
         left: 10%;
         right: 0;
         top: 10%;
@@ -266,7 +196,7 @@ import thirdImage from '@/assets/photos/natural/natural-3.jpg'
 
         &:hover,
         :focus {
-          transform: scale(1.4) rotate(-4deg);
+          transform: scale(1.4);
         }
 
         @media (min-width: $big-mobile) and (max-width: $tablet) {
@@ -290,22 +220,206 @@ import thirdImage from '@/assets/photos/natural/natural-3.jpg'
         @include ipad-portrait {
           left: -5%;
           top: 5%;
-          transform: scale(1) rotate(-2deg);
+          transform: scale(1) rotate(-4deg);
           &:hover,
           :focus {
-            transform: scale(1.2) rotate(-8deg);
+            transform: scale(1.2);
           }
         }
       }
+
+      &--p3 {
+        z-index: 2;
+        top: 25%;
+        left: 25%;
+        transform: scale(1.2) ;
+        transition: transform ease 300ms;
+
+        &:hover,
+        :focus {
+          transform: scale(1.4);
+        }
+
+        @media (min-width: $big-mobile) and (max-width: $tablet) {
+          transform: scale(1.4) rotate(4deg);
+        }
+
+        @media (min-width: $tablet) {
+          top: 25%;
+          left: 40%;
+        }
+
+        @media (min-width: $desktop) {
+          left: 15%;
+          top: 10%;
+          transform: scale(1.4);
+
+          &:hover,
+          :focus {
+            transform: scale(1.6);
+          }
+        }
+
+        @include ipad-portrait {
+          top: 25%;
+          left: 25%;
+          transform: scale(1) rotate(4deg);
+          &:hover,
+          :focus {
+            transform: scale(1.2);
+          }
+        }
+      }
+      &--p2 {
+        z-index: 2;
+        right: 10%;
+        top: 40%;
+        transform: scale(1.2) rotate(5deg);
+        transition: transform ease 300ms;
+
+        &:hover,
+        :focus {
+          transform: scale(1.4);
+        }
+
+        @media (min-width: $big-mobile) and (max-width: $tablet) {
+          right: 20%;
+          transform: scale(1.4) rotate(5deg);
+        }
+
+        @media (min-width: $tablet) {
+          bottom: 5%;
+        }
+
+        @media (min-width: $desktop) {
+          right: 15%;
+          top: 10%;
+          transform: scale(1.4) rotate(5deg);
+
+          &:hover,
+          :focus {
+            transform: scale(1.6);
+          }
+        }
+
+        @include ipad-portrait {
+          top: 15%;
+          bottom: 0;
+          right: -5%;
+          transform: scale(1) rotate(5deg);
+          &:hover,
+          :focus {
+            transform: scale(1.2);
+          }
+        }
+      }
+
+      &--p4 {
+        z-index: 1;
+        left: 10%;
+        right: 0;
+        top: 40%;
+        transform: scale(1.2) rotate(-4deg);
+        transition: transform ease 300ms;
+
+        &:hover,
+        :focus {
+          transform: scale(1.4) rotate(-4deg);
+        }
+
+        @media (min-width: $big-mobile) and (max-width: $tablet) {
+          bottom: 10%;
+          top: initial;
+          left: -10%;
+          transform: scale(1.4) rotate(-2deg);
+        }
+
+        @media (min-width: $tablet) {
+          bottom: 15%;
+          top: initial;
+          bottom: 10%;
+          top: initial;
+          left: -10%;
+        }
+
+        @media (min-width: $desktop) {
+          left: 0;
+          top: 10%;
+          transform: scale(1.4) rotate(-4deg);
+          &:hover,
+          :focus {
+            transform: scale(1.6) translate3d(-1rem, 0, 2rem);
+          }
+        }
+
+        @include ipad-portrait {
+          bottom: 10%;
+          top: initial;
+          left: -10%;
+          transform: scale(1) rotate(-2deg);
+          &:hover,
+          :focus {
+            transform: scale(1.2);
+          }
+        }
+      }
+
+      &--p5 {
+        z-index: 0;
+        right: 10%;
+        top: 10%;
+        transform: scale(1.2) rotate(5deg);
+        transition: transform ease 300ms;
+
+        &:hover,
+        :focus {
+          transform: scale(1.3);
+        }
+
+        @media (min-width: $big-mobile) and (max-width: $tablet) {
+          top: 0;
+          right: -10%;
+          transform: scale(1.4) rotate(5deg);
+        }
+
+        @media (min-width: $tablet) {
+          bottom: 5%;
+          top: 0;
+          right: -10%;
+        }
+
+        @media (min-width: $desktop) {
+          right: 0;
+          top: 10%;
+          transform: scale(1.4) rotate(5deg);
+
+          &:hover,
+          :focus {
+            transform: scale(1.6);
+          }
+        }
+
+        @include ipad-portrait {
+          top: 0;
+          right: -10%;
+          transform: scale(1);
+          &:hover,
+          :focus {
+            transform: scale(1.2);
+          }
+        }
+      }
+
       &:hover,
       :focus {
         box-shadow: 0 2.5rem 4rem $color__black__transparency--medium;
         z-index: 20;
       }
-    }
-    &:hover &__photo:not(:hover) {
-      animation: gradient 1s ease;
-      z-index: 19;
+
+      &:hover &__photo:not(:hover) {
+        animation: gradient 1s ease;
+        z-index: 19;
+      }
     }
   }
 }
