@@ -2,10 +2,10 @@
   <nav class="NavBar" role="navigation">
     <RouterLink to="/"><h1>ENXING SHYU</h1></RouterLink>
     <div class="NavBar__menu">
-      <RouterLink to="/al-natural">Al natural</RouterLink>
+      <RouterLink to="/al-natural">Al natural</RouterLink
+      ><RouterLink to="/portfolio">Portfolio</RouterLink>
       <RouterLink to="/performance">Performance</RouterLink>
       <RouterLink to="/spots">Spots</RouterLink>
-      <RouterLink to="/sobre-mi">Sobre mí</RouterLink>
     </div>
   </nav>
 </template>

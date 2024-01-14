@@ -1,13 +1,15 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import AboutView from '../views/AboutView.vue'
+import PortfolioView from '../views/PortfolioView.vue'
+
 
 const router = createRouter({
   history: createWebHistory('/enxings-portfolio/'),
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: HomeView
+      name: 'sobre-mi',
+      component: AboutView
     },
     {
       path: '/al-natural',
@@ -25,9 +27,9 @@ const router = createRouter({
       component: () => import('../views/SpotsView.vue')
     },
     {
-      path: '/sobre-mi',
-      name: 'sobre-mi',
-      component: () => import('../views/AboutView.vue')
+      path: '/portfolio',
+      name: 'portfolio',
+      component: PortfolioView
     },
     {
       path: '/book/:id',

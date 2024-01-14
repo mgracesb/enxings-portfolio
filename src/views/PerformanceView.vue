@@ -5,9 +5,9 @@
         <img v-for="image in bookImages" class="PerformanceView__image" :key="image" :src="image" />
       </div>
       <div class="PerformanceView__videos">
-
+        <VideoPlayer vid="/performance-2.mp4"/>
+        <VideoPlayer vid="/performance-1.mp4"/>
       </div>
-      <!-- <VideoPlayer /> -->
     </div>
   </div>
 </template>
@@ -30,7 +30,6 @@ export default defineComponent({
     onMounted(() => {
       const route = useRoute()
       bookID.value = route.params.id
-      console.log('books',imageList.DummyPerformance)
 
       // eslint-disable-next-line no-prototype-builtins
       if (imageList.DummyPerformance.hasOwnProperty('images')) {
@@ -59,12 +58,21 @@ $optionDefaultColours: #ed5565, #fc6e51, #ffce54, #2ecc71, #5d9cec, #ac92ec;
     display: grid;
     grid-template-columns: 1fr;
     overflow: hidden;
+    @media (min-width: $tablet) {
+      padding: 10%;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
   }
   &__image {
     width: 100%;
     object-fit: cover;
     padding-top: 1rem;
     &:first-of-type {
+      padding-top: 0;
+    }
+    @media (min-width: $tablet) {
+      height: 100%;
       padding-top: 0;
     }
   }

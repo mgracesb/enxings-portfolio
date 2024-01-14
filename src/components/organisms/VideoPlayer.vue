@@ -1,22 +1,24 @@
 <template>
   <div class="VideoPlayer">
-    <video ref="VideoPlayer">
-      <source
-        src="performance-1.mp4"
-        type="video/mp4"
-      />
-      Your browser does not support the video tag.
-    </video>
-    <div class="VideoPlayer__buttons">
-      <button class="VideoPlayer__button" @click="play">
-        <span class="button__play"></span>
-      </button>
-      <button class="VideoPlayer__button" @click="pause">
-        <span class="button__pause"></span>
-      </button>
-      <button class="VideoPlayer__button" @click="stop">
-        <span class="button__stop"></span>
-      </button>
+    <div class="VideoPlayer__wrapper">
+      <video ref="VideoPlayer" class="VideoPlayer__player">
+        <source
+          :src="vid"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+      <div class="VideoPlayer__buttons">
+        <button class="VideoPlayer__button" @click="play">
+          <span class="button__play"></span>
+        </button>
+        <button class="VideoPlayer__button" @click="pause">
+          <span class="button__pause"></span>
+        </button>
+        <button class="VideoPlayer__button" @click="stop">
+          <span class="button__stop"></span>
+        </button>
+      </div>
     </div>
   </div>
   
@@ -28,6 +30,7 @@ import { ref } from 'vue'
 
 export default defineComponent({
   name: "VideoPlayer",
+  props: { vid: {type: String, required: true} },
   setup() {
     const VideoPlayer = ref(null);
 
@@ -58,17 +61,30 @@ export default defineComponent({
 
 <style scoped lang="scss">
   .VideoPlayer {
+    padding: 5% 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+
+    &__wrapper {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid gray;
+      background-color: white;
+    }
+    &__player {
+      width: 100%;
+    }
     &__buttons {
-      width: 50%;
       padding-top: 1rem;
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: space-evenly;
+      gap: 10px;
     }
     &__button {
       height: 50px;
@@ -80,6 +96,14 @@ export default defineComponent({
       background-color: white;
       border: 2px solid #bdbdbd;
       box-shadow: none;
+      cursor: pointer;
+      &:hover {
+        border: 2px solid rgb(7, 144, 16);
+        > span {
+          height: 20px;
+          width: 20px;
+        }
+      }
 
       > span {
         display: inline-block;
@@ -89,6 +113,7 @@ export default defineComponent({
       }
       .button__play {
         background-image: url('../../assets/icons/play.png');
+        
       }
       .button__pause {
         background-image: url('../../assets/icons/pause.png');

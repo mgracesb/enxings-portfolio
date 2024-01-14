@@ -10,23 +10,14 @@
   <RouterView />
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { RouterView } from 'vue-router'
-import { onMounted, onBeforeUnmount, ref, computed } from 'vue'
+import { onMounted, onBeforeUnmount, ref } from 'vue'
 import NavBar from './components/organisms/NavBar.vue'
 import MobileNavBar from './components/organisms/MobileNavBar.vue'
 
 const deviceType = ref('Desktop') // Default to Desktop
 const isMenuOpen = ref(false)
-
-//text shadow
-const getShadow = computed(() => {
-  let shadow = ''
-  for (let i = 0; i < 8; i++) {
-    shadow += (shadow ? ',' : '') + -i * 1 + 'px ' + i * 1 + 'px 0 #d9d9d9'
-  }
-  return shadow
-})
 
 onBeforeUnmount(() => {
   window.removeEventListener('click', handleClickOutside)

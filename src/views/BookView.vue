@@ -40,7 +40,7 @@ const getImagePath = (bookID, image) => {
 }
 
 const goBackHome = () => {
-  router.push({name: 'home'})
+  router.push({name: 'portfolio'})
 }
 </script>
 

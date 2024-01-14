@@ -16,13 +16,26 @@
       <p class="AboutView__contact__text">
         Siempre estoy en búsqueda de la excelencia, participando en cursos y masterclass que me
         permiten crecer como profesional. Te invito a explorar mi trabajo y a acompañarme en este
-        emocionante viaje creativo.
+        <span class="AboutView__contact__link">
+          <RouterLink to="/portfolio"> ✨emocionante viaje creativo✨ </RouterLink>
+        </span>
       </p>
+
       <div class="AboutView__contact">
         <p class="AboutView__contact__text">Puedes encontrarme en</p>
         <div class="AboutView__socialmedia">
-          <a href="https://www.instagram.com/ensi_sb02" target="_blank" rel="noopener" class="AboutView__icon instagram"></a>
-          <a href="https://www.facebook.com/Nxingsb02" target="_blank" rel="noopener" class="AboutView__icon facebook"></a>
+          <a
+            href="https://www.instagram.com/ensi_sb02"
+            target="_blank"
+            rel="noopener"
+            class="AboutView__icon instagram"
+          ></a>
+          <a
+            href="https://www.facebook.com/Nxingsb02"
+            target="_blank"
+            rel="noopener"
+            class="AboutView__icon facebook"
+          ></a>
         </div>
       </div>
     </div>
@@ -53,6 +66,20 @@
       padding: 1rem 0;
       line-height: 1.5rem;
       text-align: left;
+    }
+    &__link {
+      display: inline-block;
+      padding-top: 0.8rem;
+      width: 100%;
+      text-align: center;
+
+      a {
+        font-size: 1.3rem;
+        transition: 300ms ease;
+        &:hover, &:active, &:focus {
+          letter-spacing: 2px;
+        }
+      }
     }
   }
 
@@ -97,18 +124,6 @@
     &__socialmedia {
       max-width: 35%;
     }
-  }
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
   }
 }
 </style>

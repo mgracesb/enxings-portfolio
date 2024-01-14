@@ -7,10 +7,10 @@
       <span></span>
       <div class="MobileNavBar__menu__items" @click="handleMenu">
         <RouterLink to="/"><h1>ENXING SHYU</h1></RouterLink>
-        <RouterLink to="/al-natural">Al natural</RouterLink>
+        <RouterLink to="/al-natural">Al natural</RouterLink
+        ><RouterLink to="/portfolio">Portfolio</RouterLink>
         <RouterLink to="/performance">Performance</RouterLink>
         <RouterLink to="/spots">Spots</RouterLink>
-        <RouterLink to="/sobre-mi">Sobre mí</RouterLink>
       </div>
     </div>
   </nav>
