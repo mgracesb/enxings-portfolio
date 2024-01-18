@@ -208,7 +208,7 @@ import fifthImage from '@/assets/photos/natural/natural-5.jpg'
         }
 
         @media (min-width: $desktop) {
-          left: 35%;
+          left: 47%;
           top: 10%;
           transform: scale(1.4);
           &:hover,
@@ -250,7 +250,7 @@ import fifthImage from '@/assets/photos/natural/natural-5.jpg'
         }
 
         @media (min-width: $desktop) {
-          left: 15%;
+          left: 20%;
           top: 10%;
           transform: scale(1.4);
 

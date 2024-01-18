@@ -19,24 +19,30 @@ import { useScroll } from '@vueuse/core'
 import ScrollHelper from '@/components/molecules/ScrollHelper.vue'
 import ContentSection from '@/components/molecules/ContentSection.vue'
 import EleganceImgCover from '@/assets/photos/elegance/elegance-1.jpg'
-import PopImgCover from '@/assets/photos/pop/pop-1.jpg'
+import NeonImgCover from '@/assets/photos/neon/neon-1.jpg'
+import BleuImgCover from '@/assets/photos/bleu/bleu-1.jpg'
 import WhiteImgCover from '@/assets/photos/white/white-1.jpg'
 import FlameImgCover from '@/assets/photos/flame/flame-1.jpg'
 import GreenImgCover from '@/assets/photos/green/green-1.jpg'
 import PinkImgCover from '@/assets/photos/pink/pink-1.jpg'
 import CamelImgCover from '@/assets/photos/camel/camel-1.jpg'
+import MovementImgCover from '@/assets/photos/movement/movement-1.jpg'
+import WavesImgCover from '@/assets/photos/waves/waves-1.jpg'
 import MoreImgCover from '@/assets/photos/more/more-1.jpg'
 import ChanceImgCover from '@/assets/photos/chance/chance-1.jpg'
 
 const sectionRefs = ref([
   { id: 'elegance', image: EleganceImgCover, title: 'Elegance' },
   { id: 'chance', image: ChanceImgCover, title: 'Chance' },
-  { id: 'pop', image: PopImgCover, title: 'Neon' },
+  { id: 'neon', image: NeonImgCover, title: 'Neon' },
+  { id: 'bleu', image: BleuImgCover, title: 'Bleu' },
   { id: 'white', image: WhiteImgCover, title: 'Ivory' },
   { id: 'flame', image: FlameImgCover, title: 'Flame' },
   { id: 'green', image: GreenImgCover, title: 'Mint' },
-  { id: 'pink', image: PinkImgCover, title: 'Pink' },
+  { id: 'waves', image: WavesImgCover, title: 'Waves' },
+  { id: 'movement', image: MovementImgCover, title: 'Movement' },
   { id: 'camel', image: CamelImgCover, title: 'Camel' },
+  { id: 'pink', image: PinkImgCover, title: 'Pink' },
   { id: 'more', image: MoreImgCover, title: 'More' }
 ])
 
@@ -102,8 +108,12 @@ onMounted(() => {
     background-color: $color__dark;
   }
 
-  &.pop {
+  &.neon {
     background-color: #b8b321;
+  }
+
+  &.bleu {
+    background-color: #002E3B;
   }
 
   &.white {
@@ -115,7 +125,11 @@ onMounted(() => {
   }
 
   &.green {
-    background-color: #8aae92;
+    background-color: #BFE5D9;
+  }
+
+  &.waves {
+    background-color: #88ABB1;
   }
 
   &.pink {
@@ -124,6 +138,10 @@ onMounted(() => {
 
   &.camel {
     background-color: #d9c2b8;
+  }
+
+  &.movement {
+    background-color: #910417;
   }
 
   &.more {

@@ -2,8 +2,8 @@
   <nav class="NavBar" role="navigation">
     <RouterLink to="/"><h1>ENXING SHYU</h1></RouterLink>
     <div class="NavBar__menu">
-      <RouterLink to="/al-natural">Al natural</RouterLink
-      ><RouterLink to="/portfolio">Portfolio</RouterLink>
+      <RouterLink to="/sin-filtros">Sin filtros</RouterLink>
+      <RouterLink to="/portfolio">Portfolio</RouterLink>
       <RouterLink to="/performance">Performance</RouterLink>
       <RouterLink to="/spots">Spots</RouterLink>
     </div>
@@ -38,6 +38,11 @@ import { RouterLink } from 'vue-router'
   &__menu {
     a {
       padding-left: 2rem;
+      &.router-link-active {
+        font-weight: bold;
+        letter-spacing: 1px;
+        font-size: 16px;
+      }
     }
 
     a:first-of-type {

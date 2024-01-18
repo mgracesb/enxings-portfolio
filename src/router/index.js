@@ -12,8 +12,8 @@ const router = createRouter({
       component: AboutView
     },
     {
-      path: '/al-natural',
-      name: 'al-natural',
+      path: '/sin-filtros',
+      name: 'sin-filtros',
       component: () => import('../views/AlNaturalView.vue')
     },
     {

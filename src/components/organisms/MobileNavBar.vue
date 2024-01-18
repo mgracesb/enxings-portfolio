@@ -7,8 +7,8 @@
       <span></span>
       <div class="MobileNavBar__menu__items" @click="handleMenu">
         <RouterLink to="/"><h1>ENXING SHYU</h1></RouterLink>
-        <RouterLink to="/al-natural">Al natural</RouterLink
-        ><RouterLink to="/portfolio">Portfolio</RouterLink>
+        <RouterLink to="/sin-filtros">Sin filtros</RouterLink>
+        <RouterLink to="/portfolio">Portfolio</RouterLink>
         <RouterLink to="/performance">Performance</RouterLink>
         <RouterLink to="/spots">Spots</RouterLink>
       </div>
@@ -56,6 +56,9 @@ export default defineComponent({
       &:focus,
       :active {
         color: $color__primary;
+      }
+      &.router-link-active {
+        font-weight: bold;
       }
     }
 
