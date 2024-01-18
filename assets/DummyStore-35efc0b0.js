@@ -1,0 +1,1 @@
+const e={elegance:[1,2,3],chance:[1,2,3,4],camel:[1,2,3,4],green:[1,2,3,4],natural:[1,2,3],waves:[1,2,3,4,5],neon:[1,2,3,4,5,6,7,8,9,10],bleu:[1,2,3],flame:[1,2,3],white:[1,2,3],movement:[1,2,3,4],pink:[1,2,3],more:[1,2,3,4,5,6,7,8,9,10,11]},m={images:[1,2,3,4,5,6,7,8,9],videos:[1,2]},n={DummyStore:e,DummyPerformance:m};export{n as D};

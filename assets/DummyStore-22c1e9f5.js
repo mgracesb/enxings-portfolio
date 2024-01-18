@@ -1,1 +1,0 @@
-const e={elegance:[1,2,3],chance:[1,2,3,4],camel:[1,2,3,4],green:[1,2,3,4],natural:[1,2,3],pink:[1,2,3],pop:[1,2,3,4,5,6,7],flame:[1,2,3],white:[1,2,3],more:[1,2,3,4,5,6,7,8,9]},m={images:[1,2,3,4,5,6],videos:[1,2]},o={DummyStore:e,DummyPerformance:m};export{o as D};
