@@ -6,7 +6,7 @@
         @click="handleClickOption(1)"
         :class="{ active: activeOption === 1 }"
       >
-        <h3 class="SpotsView__panel__text">Bendito Bocado</h3>
+        <h3 class="SpotsView__panel__text">G.O.A.T</h3>
       </div>
 
       <div
@@ -14,7 +14,7 @@
         @click="handleClickOption(2)"
         :class="{ active: activeOption === 2 }"
       >
-        <h3 class="SpotsView__panel__text">Bendito Bocado</h3>
+        <h3 class="SpotsView__panel__text">G.O.A.T</h3>
       </div>
 
       <div
@@ -22,7 +22,7 @@
         @click="handleClickOption(3)"
         :class="{ active: activeOption === 3 }"
       >
-        <h3 class="SpotsView__panel__text">Bendito Bocado</h3>
+        <h3 class="SpotsView__panel__text">G.O.A.T</h3>
       </div>
 
       <div
@@ -39,6 +39,22 @@
         :class="{ active: activeOption === 5 }"
       >
         <h3 class="SpotsView__panel__text">Escuela Antonio Eloy</h3>
+      </div>
+
+      <div
+        class="SpotsView__panel panel__six"
+        @click="handleClickOption(6)"
+        :class="{ active: activeOption === 6 }"
+      >
+        <h3 class="SpotsView__panel__text">Mayas</h3>
+      </div>
+
+      <div
+        class="SpotsView__panel panel__seven"
+        @click="handleClickOption(7)"
+        :class="{ active: activeOption === 7 }"
+      >
+        <h3 class="SpotsView__panel__text">Mayas</h3>
       </div>
     </div>
   </div>
@@ -117,6 +133,7 @@ const handleClickOption = (num) => {
       h3 {
         opacity: 1;
         transition: opacity 0.3s ease-in 0.4s;
+        text-shadow: 1px 1px 2px $color__dark;
       }
     }
   }
@@ -136,6 +153,13 @@ const handleClickOption = (num) => {
   }
   .panel__five {
     background-image: url('@/assets/spots/spot-5.jpg');
+  }
+  .panel__six {
+    background-image: url('@/assets/spots/spot-6.jpg');
+    background-position: bottom;
+  }
+  .panel__seven{
+    background-image: url('@/assets/spots/spot-7.jpg');
     background-position-y: 10%;
   }
 
