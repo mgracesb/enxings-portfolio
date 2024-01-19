@@ -46,7 +46,7 @@
         @click="handleClickOption(6)"
         :class="{ active: activeOption === 6 }"
       >
-        <h3 class="SpotsView__panel__text">Mayas</h3>
+        <h3 class="SpotsView__panel__text">My libies</h3>
       </div>
 
       <div
@@ -54,7 +54,7 @@
         @click="handleClickOption(7)"
         :class="{ active: activeOption === 7 }"
       >
-        <h3 class="SpotsView__panel__text">Mayas</h3>
+        <h3 class="SpotsView__panel__text">My libies</h3>
       </div>
     </div>
   </div>
